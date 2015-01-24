@@ -6,13 +6,13 @@ library(dplyr)
 #Part 1
 #Merges the training and the test sets to create one data set.
 
-X_train = read.table("UCI_HAR_Dataset/train/X_train.txt", header=FALSE, sep="")
-subject_train = read.table("UCI_HAR_Dataset/train/subject_train.txt", header=FALSE, sep="")
-y_train = read.table("UCI_HAR_Dataset/train/y_train.txt", header=FALSE, sep="")
+X_train = read.table("UCI HAR Dataset/train/X_train.txt", header=FALSE, sep="")
+subject_train = read.table("UCI HAR Dataset/train/subject_train.txt", header=FALSE, sep="")
+y_train = read.table("UCI HAR Dataset/train/y_train.txt", header=FALSE, sep="")
 
-X_test = read.table("UCI_HAR_Dataset/test/X_test.txt", header=FALSE, sep="")
-subject_test = read.table("UCI_HAR_Dataset/test/subject_test.txt", header=FALSE, sep="")
-y_test = read.table("UCI_HAR_Dataset/test/y_test.txt", header=FALSE, sep="")
+X_test = read.table("UCI HAR Dataset/test/X_test.txt", header=FALSE, sep="")
+subject_test = read.table("UCI HAR Dataset/test/subject_test.txt", header=FALSE, sep="")
+y_test = read.table("UCI HAR Dataset/test/y_test.txt", header=FALSE, sep="")
 
 merged_train = cbind(X_train, subject_train, y_train, deparse.level=1)
 colnames(merged_train)[ncol(merged_train)-1] = 'subject'
@@ -34,8 +34,9 @@ remove(merged_train,merged_test)
 #Part 2
 #Extracts only the measurements on the mean and standard deviation for each measurement.
 
-features = read.table("UCI_HAR_Dataset/features.txt", header=FALSE, sep="")
+features = read.table("UCI HAR Dataset/features.txt", header=FALSE, sep="")
 features$V2 = as.character(features$V2)
+#features = rbind(features, data.frame(V1 = c(nrow(features)+1,nrow(features)+2), V2 = c("subject","y")))
 logic_mean = grepl("mean()",features$V2, fixed=T)
 logic_std = grepl("std()",features$V2, fixed=T)
 logic_mean_std = logic_mean | logic_std
@@ -48,7 +49,7 @@ remove(full_data,logic_mean,logic_std)
 #Part 3
 #Uses descriptive activity names to name the activities in the data set
 
-activity_labels = read.table("UCI_HAR_Dataset/activity_labels.txt", header=FALSE, sep="")
+activity_labels = read.table("UCI HAR Dataset/activity_labels.txt", header=FALSE, sep="")
 activity_labels$V2 = as.character(activity_labels$V2)
 
 for (inc in 1:nrow(activity_labels))
@@ -60,6 +61,7 @@ for (inc in 1:nrow(activity_labels))
 #Part 4
 #Appropriately labels the data set with descriptive variable names. 
 
+#mean_std_data = rename(mean_std_data,c("y" = "activity_label", "subject" = "individual_ID"))
 names(mean_std_data)[names(mean_std_data)=="y"] = "activity_label"
 names(mean_std_data)[names(mean_std_data)=="subject"] = "individual_ID"
 
