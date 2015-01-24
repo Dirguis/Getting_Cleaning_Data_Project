@@ -1,22 +1,22 @@
 NOTE: important variables are preceded by a star.
 
 merged_train : merge of the train set
-    UCI_HAR_Dataset/train/X_train.txt
-    UCI_HAR_Dataset/train/subject_train.txt
-    UCI_HAR_Dataset/train/y_train.txt
+    UCI HAR Dataset/train/X_train.txt
+    UCI HAR Dataset/train/subject_train.txt
+    UCI HAR Dataset/train/y_train.txt
 
 merge_test : merge of the test set
-    UCI_HAR_Dataset/test/X_test.txt
-    UCI_HAR_Dataset/test/subject_test.txt
-    UCI_HAR_Dataset/test/y_test.txt
+    UCI HAR Dataset/test/X_test.txt
+    UCI HAR Dataset/test/subject_test.txt
+    UCI HAR Dataset/test/y_test.txt
 
 * full_data : merge of merged_train and merged_test, corresponding to the merge of the train and test data sets.
 
-features : data frame reading UCI_HAR_Dataset/features.txt.
+features : data frame reading UCI HAR Dataset/features.txt.
 
 * mean_std_data : data frame from full_data, but only with features on only either mean() or std().
 
-activity_labels : data frame reading UCI_HAR_Dataset/activity_labels.txt
+activity_labels : data frame reading UCI HAR Dataset/activity_labels.txt
 
 temp : list returned by the function colMeans()
 
