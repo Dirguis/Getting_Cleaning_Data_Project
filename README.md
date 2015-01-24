@@ -1,5 +1,5 @@
 # Getting_Cleaning_Data_Project
-tidy data set, R script, README.md and CodeBook files for peer review for the project from the course getting cleaning data
+The repository contains a : R script, README.md and CodeBook files for peer review for the project from the course getting cleaning data
 
 ReadMe, script run_analysis.R coded in R for the project in the course Getting and Cleaning Data
 01/24/2015
