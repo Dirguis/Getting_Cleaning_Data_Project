@@ -16,10 +16,11 @@ You should create one R script called run_analysis.R that does the following:
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 given the set of data available at this link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
 The data set represents data collected from the accelerometers from the Samsung Galaxy S smartphone. The online description of the data set can be found at this link: 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
-The downloaded file should unzipped and the script, placed in the same folder, will execute each of the 5 steps above, in order, and write the final tidy data set in a .txt file called 'meanByIdActivity .txt'.
+The downloaded file should be unzipped and the script, placed in the same folder, will execute each of the 5 steps above in order and write the final tidy data set in a .txt file called 'meanByIdActivity.txt'.
 
 Below, some more explanations for each step are given, labeled by the step number.
 
