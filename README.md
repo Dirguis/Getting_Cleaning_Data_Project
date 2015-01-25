@@ -27,10 +27,15 @@ Below, some more explanations for each step are given, labeled by the step numbe
 1) 
 Six files in total are read, 3 from the training set and 3 from the test set.
 UCI HAR Dataset/train/X_train.txt
+
 UCI HAR Dataset/train/subject_train.txt
+
 UCI HAR Dataset/train/y_train.txt
+
 UCI HAR Dataset/test/X_test.txt
+
 UCI HAR Dataset/test/subject_test.txt
+
 UCI HAR Dataset/test/y_test.txt
 
 The subject and y _train.txt and _test.txt have one column and are merged by column with their respective X_train.txt and X_test.txt into the data frames merged_train and merged_data. The column from the subject and y _train.txt and _test.txt are relabeled 'subject' and 'y', for clarity. Finally, both data frames are merged by rows in the data frame full_data, 10299 obs x 563 var.
