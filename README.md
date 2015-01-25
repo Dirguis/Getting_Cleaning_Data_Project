@@ -61,4 +61,4 @@ A vector of unique IDs and activities is created. For each individual pair of (I
 
 Finally, the column in meanByIdActivity are rearranged to have the ID and the activity as th first 2 columns, followed by the remaining features. This was done for clarity since the data were grouped by ID and activity to calculate the mean.
 
-The last step is to write the data frame meanByIdActivity in meanByIdActivity.txt using write.table().
+The last step is to write the data frame meanByIdActivity in meanByIdActivity.txt using write.table(). It can be loaded into R by executing the command: DirguisDF =  read.table("meanByIdActivity.txt", sep = ",", header=T)
