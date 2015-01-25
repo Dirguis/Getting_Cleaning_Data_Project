@@ -114,4 +114,5 @@ meanByIdActivity = meanByIdActivity[c("individual_ID","activity_label",names(mea
 remove(activity_labels,features,mean_std_data,transfertDF,count,inc,incActivity,incIndID,logic_mean_std,mean_std_features,
        temp, unique_activity,unique_ID)
 
+
 write.table(meanByIdActivity,"meanByIdActivity.txt", sep = ",", row.names = F)
