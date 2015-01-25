@@ -36,7 +36,6 @@ remove(merged_train,merged_test)
 
 features = read.table("UCI HAR Dataset/features.txt", header=FALSE, sep="")
 features$V2 = as.character(features$V2)
-#features = rbind(features, data.frame(V1 = c(nrow(features)+1,nrow(features)+2), V2 = c("subject","y")))
 logic_mean = grepl("mean()",features$V2, fixed=T)
 logic_std = grepl("std()",features$V2, fixed=T)
 logic_mean_std = logic_mean | logic_std
@@ -61,7 +60,6 @@ for (inc in 1:nrow(activity_labels))
 #Part 4
 #Appropriately labels the data set with descriptive variable names. 
 
-#mean_std_data = rename(mean_std_data,c("y" = "activity_label", "subject" = "individual_ID"))
 names(mean_std_data)[names(mean_std_data)=="y"] = "activity_label"
 names(mean_std_data)[names(mean_std_data)=="subject"] = "individual_ID"
 
