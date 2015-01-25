@@ -76,7 +76,7 @@ for (inc in 1:(length(mean_std_features)-2))
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable 
 #for each activity and each subject.
 
-unique_ID = unique(mean_std_data$individual_ID)
+unique_ID = sort(unique(mean_std_data$individual_ID))
 unique_activity = unique(mean_std_data$activity_label)
 
 count = 0
